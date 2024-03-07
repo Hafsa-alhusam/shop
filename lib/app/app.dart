@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../ui/screen/splash.dart';
+import '../ui/res/binding.dart';
+import '../ui/res/routes.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,11 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Shop',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const Splash(),
+      debugShowCheckedModeBanner: false,
+      
+      getPages: AppRoutes.routes,
+      initialRoute: AppRoutes.splash,
+      initialBinding: SplashBinding(),
     );
   }
 }
