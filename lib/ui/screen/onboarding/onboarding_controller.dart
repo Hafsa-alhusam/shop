@@ -15,15 +15,23 @@ class OnboardingController extends GetxController {
     pageController = PageController();
     super.onInit();
   }
+  //
 
   void continueButton() {
-    if (pageController.page == pages.length) {
-      Get.offNamed(AppRoutes.login);
+    if (pageController.page == pages.length - 1) {
+      Get.offNamed(AppRoutes.signin);
     }
+  //
     pageController.nextPage(
         duration: const Duration(milliseconds: 300), curve: Curves.bounceInOut);
   }
 
+  //
+  void goToSignin() {
+    Get.offNamed(AppRoutes.signin);
+  }
+
+  //
   @override
   void dispose() {
     pageController.dispose();
@@ -31,15 +39,21 @@ class OnboardingController extends GetxController {
   }
 }
 
+ //
 class OnboardingModel {
   final String title;
   final String image;
   final String description;
+  final String button;
   OnboardingModel(
-      {required this.description, required this.image, required this.title});
+      {required this.description,
+      required this.image,
+      required this.title,
+      required this.button});
 
   factory OnboardingModel.fromMap(Map<String, dynamic> data) => OnboardingModel(
       description: data['description'],
+      button: data['button'],
       title: data['title'],
       image: data['image']);
 }
