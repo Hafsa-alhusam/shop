@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:shop/ui/res/app_colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'onboarding_controller.dart';
 
@@ -29,10 +30,10 @@ class OnboardingView extends GetView<OnboardingController> {
                           controller: controller.pageController,
                           count: 3,
                           effect: const ExpandingDotsEffect(
-                              dotColor: Colors.grey,
+                              dotColor: AppColor.grey,
                               dotHeight: 5,
                               dotWidth: 5,
-                              activeDotColor: Color(0xffD7FC70),
+                              activeDotColor: AppColor.lite_green,
                               spacing: 10,
                               radius: 20)),
                     ],
@@ -44,7 +45,7 @@ class OnboardingView extends GetView<OnboardingController> {
                     decoration: const BoxDecoration(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(30)),
-                        color: Color(0xff000000)),
+                        color: AppColor.black),
                     width: Get.width,
                     height: 300,
                     child: Column(
