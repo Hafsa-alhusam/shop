@@ -17,8 +17,7 @@ class OnboardingView extends GetView<OnboardingController> {
         child: PageView.builder(
           controller: controller.pageController,
           itemCount: controller.pages.length,
-          itemBuilder: ((context, int i) =>
-              Stack(alignment: Alignment.topCenter, children: [
+          itemBuilder: ((context, int i) => Stack(alignment: Alignment.topCenter, children: [
                 SizedBox(
                   height: Get.height / 2.6 * 2,
                   child: Column(
@@ -43,38 +42,32 @@ class OnboardingView extends GetView<OnboardingController> {
                   bottom: 0,
                   child: Container(
                     decoration: const BoxDecoration(
-                        borderRadius:
-                            BorderRadius.vertical(top: Radius.circular(30)),
+                        borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
                         color: AppColor.black),
                     width: Get.width,
                     height: 300,
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(controller.pages[i].title,
-                              style: Theme.of(context).textTheme.titleLarge),
-                          Text(controller.pages[i].description,
-                              style: Theme.of(context).textTheme.labelLarge),
-                          ElevatedButton(
-                              onPressed: () => controller.continueButton(),
-                              child: Text(controller.pages[i].button)),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 90.0),
-                            child: Row(
-                              children: [
-                                Text("Already have an account ?",
-                                    style:
-                                        Theme.of(context).textTheme.labelLarge),
-                                TextButton(
-                                    onPressed: () => controller.goToSignin(),
-                                    child: Text("Log In",
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .labelMedium)),
-                              ],
-                            ),
-                          ),
-                        ]),
+                    child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                      Text(controller.pages[i].title,
+                          style: Theme.of(context).textTheme.titleLarge),
+                      Text(controller.pages[i].description,
+                          style: Theme.of(context).textTheme.labelLarge),
+                      ElevatedButton(
+                          onPressed: () => controller.continueButton(),
+                          child: Text(controller.pages[i].button)),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 90.0),
+                        child: Row(
+                          children: [
+                            Text("Already have an account ?",
+                                style: Theme.of(context).textTheme.labelLarge),
+                            TextButton(
+                                onPressed: () => controller.goToSignin(),
+                                child:
+                                    Text("Log In", style: Theme.of(context).textTheme.labelMedium)),
+                          ],
+                        ),
+                      ),
+                    ]),
                   ),
                 ),
               ])),

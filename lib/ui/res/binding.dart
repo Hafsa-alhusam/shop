@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
 
-import '../screen/onboarding/onboarding_controller.dart';
-import '../screen/splash_screen/splash_view_controller.dart';
+import '../auth/auth_controller.dart';
+import '../onboarding/onboarding_controller.dart';
+import '../splash_screen/splash_view_controller.dart';
 
 class SplashBinding extends Bindings {
   @override
@@ -13,7 +14,7 @@ class OnboardingBinding extends Bindings {
   void dependencies() => Get.put<OnboardingController>(OnboardingController());
 }
 
-class LoginBinding extends Bindings {
+class AuthBinding extends Bindings {
   @override
-  void dependencies() => Get.put<OnboardingController>(OnboardingController());
+  void dependencies() => Get.put<AuthController>(AuthController());
 }

@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
       title: 'Shop',
       debugShowCheckedModeBanner: false,
       getPages: AppRoutes.routes,
-      initialRoute: AppRoutes.splash,
-      initialBinding: SplashBinding(),
+      initialRoute: AppRoutes.auth,
+      // initialBinding: SplashBinding(),
       theme: ApplicationTheme.getAppTheme(),
     );
   }
