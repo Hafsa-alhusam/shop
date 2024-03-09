@@ -47,6 +47,11 @@ class ApplicationTheme {
         ),
         //
         //
-        dialogTheme: const DialogTheme(backgroundColor: AppColor.black));
+        dialogTheme: const DialogTheme(
+            surfaceTintColor: Colors.transparent,
+            backgroundColor: AppColor.black,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                side: BorderSide(color: AppColor.grey))));
   }
 }

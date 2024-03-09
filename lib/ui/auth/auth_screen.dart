@@ -26,7 +26,7 @@ class AuthScreen extends StatelessWidget {
               Visibility(
                 // visible: index < 2,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 10),
+                  padding: const EdgeInsets.only(left: 30, top: 20),
                   child: OutlinedButton(
                     child: const Icon(Icons.arrow_back),
                     onPressed: () => AuthController.outlinedButton(),
