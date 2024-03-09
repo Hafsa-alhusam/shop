@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop/ui/res/app_colors.dart';
+
+import 'app_colors.dart';
 
 class ApplicationTheme {
   ApplicationTheme._();
@@ -24,9 +25,15 @@ class ApplicationTheme {
         textTheme: const TextTheme(
           labelLarge: TextStyle(fontSize: 14, fontFamily: 'inter', color: AppColor.grey),
           labelMedium: TextStyle(fontSize: 14, fontFamily: 'inter', color: AppColor.white),
+          bodyLarge: TextStyle(
+              fontSize: 16,
+              fontFamily: 'inter',
+              color: AppColor.white,
+              fontWeight: FontWeight.bold),
           titleLarge: TextStyle(
               fontSize: 24, color: AppColor.white, fontFamily: 'Sora', fontWeight: FontWeight.bold),
         ),
+        //
         //
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: OutlinedButton.styleFrom(
@@ -39,14 +46,7 @@ class ApplicationTheme {
           ),
         ),
         //
-        iconButtonTheme: IconButtonThemeData(style: IconButton.styleFrom()),
-
-        // 
-        inputDecorationTheme: InputDecorationTheme(
-          
-        )
-        
-        
-        );
+        //
+        dialogTheme: const DialogTheme(backgroundColor: AppColor.black));
   }
 }

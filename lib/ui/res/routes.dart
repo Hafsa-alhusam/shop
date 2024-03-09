@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:shop/ui/auth/auth_screen.dart';
 
+import '../auth/auth_screen.dart';
 import '../onboarding/onboarding_view.dart';
 import '../splash_screen/splash_view.dart';
 import 'binding.dart';

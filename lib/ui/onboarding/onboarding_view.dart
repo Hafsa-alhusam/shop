@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:shop/ui/res/app_colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../res/app_colors.dart';
 import 'onboarding_controller.dart';
 
 class OnboardingView extends GetView<OnboardingController> {
